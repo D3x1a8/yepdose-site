@@ -48,7 +48,7 @@ small{color:var(--muted)}
 .phone .r:first-child{border-top:0}
 .phone .tm{width:52px;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
 .phone .tm.late{color:var(--amber)}
-.phone .nm{flex:1}.phone .nm b{display:block;font-size:14px}.phone .nm span{font-size:12px;color:var(--muted)}.phone .nm span.late{color:var(--amber)}
+.phone .nm{flex:1;min-width:0}.phone .nm b{display:block;font-size:14px}.phone .nm span{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}.phone .nm span.late{color:var(--amber)}
 .phone .ok{width:28px;height:28px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
 .phone .ring{width:28px;height:28px;border-radius:50%;border:2px solid var(--line)}
 .phone .btn{height:32px;padding:0 12px;border-radius:16px;background:var(--accent);color:#F6F3ED;font-size:12px;font-weight:600;display:flex;align-items:center}
