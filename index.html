@@ -1,60 +1,283 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Yepdose — Medicine Reminder for iPhone and Apple Watch</title>
-<meta name="description" content="A free medicine reminder for iPhone and Apple Watch. Unlimited meds, one-tap logging, reminders that escalate until you answer. No account, no ads, no data collection.">
-<link rel="icon" href="/icon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"></head><body><main>
-<header><a class="brand wm" href="/"><img src="/icon.svg" alt="">Yepdose</a><nav><a href="/support">Support</a><a href="/privacy">Privacy</a></nav></header>
-
-<section class="hero">
-  <div>
-    <span class="badge">Coming to the App Store · December 2026</span>
-    <h1 class="wm">Never let a dose slip by quietly.</h1>
-    <p class="lead">A medicine reminder for iPhone and Apple Watch that keeps asking until you say you took it. The basics are free, and that won't change.</p>
-    <a class="cta" href="mailto:hello@yepdose.com?subject=Yepdose%20beta">Join the beta</a><a class="cta secondary" href="/support">How it works</a>
-    <p class="fine">No account. No ads. No tracking. Your data stays on your phone and in your own iCloud.</p>
-  </div>
-  <div class="phone" aria-label="Preview of the Today screen">
-    <div class="date">Tuesday, 8 September</div>
-    <div class="h">Today</div>
-    <div class="prog"><div class="top">3 of 6 taken <span>Next at 8:00 pm</span></div><div class="segs"><i class="on"></i><i class="on"></i><i class="on"></i><i class="late"></i><i></i><i></i></div></div>
-    <div class="lbl">Morning</div>
-    <div class="grp">
-      <div class="r"><div class="tm">8:00 am</div><div class="nm"><b>Metformin</b><span>1 tablet · 500 mg · taken 8:04</span></div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F6F3ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div></div>
-      <div class="r"><div class="tm">8:00 am</div><div class="nm"><b>Levothyroxine</b><span>1 tablet · 50 µg · taken 8:04</span></div><div class="ok"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#F6F3ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div></div>
-    </div>
-    <div class="lbl">Evening</div>
-    <div class="grp">
-      <div class="r"><div class="tm late">6:00 pm</div><div class="nm"><b>Metformin</b><span class="late">1 tablet · due 22 min ago</span></div><div class="btn">Took it</div></div>
-      <div class="r"><div class="tm">8:00 pm</div><div class="nm"><b>Atorvastatin</b><span>1 tablet · 20 mg</span></div><div class="ring"></div></div>
-    </div>
-  </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Yepdose: Medicine Reminder for iPhone and Apple Watch</title>
+<meta name="description" content="A free medicine reminder for iPhone and Apple Watch. Unlimited medicines, one-tap logging, follow-ups at 10, 30 and 60 minutes. No account, no ads, no data collection.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F3ED" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#151412" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://yepdose.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Yepdose">
+<meta property="og:title" content="Yepdose: Medicine Reminder for iPhone and Apple Watch">
+<meta property="og:description" content="A free medicine reminder for iPhone and Apple Watch. Unlimited medicines, one-tap logging, follow-ups at 10, 30 and 60 minutes. No account, no ads, no data collection.">
+<meta property="og:url" content="https://yepdose.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Yepdose: Medicine Reminder for iPhone and Apple Watch">
+<meta name="twitter:description" content="A free medicine reminder for iPhone and Apple Watch. Unlimited medicines, one-tap logging, follow-ups at 10, 30 and 60 minutes. No account, no ads, no data collection.">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script>document.documentElement.className+=' js'+(matchMedia('(prefers-reduced-motion: no-preference)').matches?' pre':'')</script>
+<script src="/site.js" defer></script>
+</head>
+<body>
+<a class="skiplink" href="#main">Skip to content</a>
+<svg hidden aria-hidden="true" focusable="false"><symbol id="tick" viewBox="0 0 100 100"><path d="M24 46 L44 66 L76 26" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/><path d="M44 66 V88" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" pathLength="1"/></symbol></svg>
+<header class="mast"><div class="wrap"><a class="brand" href="/"><span class="mark mark-app" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span>Yepdose</a><nav aria-label="Site"><a href="/support">Support</a><a href="/privacy">Privacy</a></nav></div></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="h1">
+<p id="status-line" class="kicker mono">Medicine reminder for iPhone and Apple Watch · Beta on TestFlight · App Store December 2026</p>
+<h1 id="h1" class="d1"><span class="w" style="--i:0">Never</span> <span class="w" style="--i:1">let</span> <span class="w" style="--i:2">a</span> <span class="w" style="--i:3">dose</span> <span class="w" style="--i:4">slip</span> <span class="w" style="--i:5">by</span> <span class="w last" style="--i:6">quietly.</span></h1>
+<div class="hr" aria-hidden="true"></div>
+<div class="grid hero-row">
+<div class="hero-copy">
+<p class="lede">Yepdose is a medicine reminder for iPhone and Apple Watch. It asks at the right time, asks again if you don't answer, and keeps a record you can trust. The basics are free. That won't change.</p>
+<div class="ctas"><a class="btn" href="mailto:hello@yepdose.com?subject=Yepdose%20beta">Join the beta</a><a class="tlink" href="#ch-01">Read how it works ↓</a></div>
+<p class="reqs">iOS 17 or later. watchOS 10 or later. No account.</p>
+</div>
+<figure class="hero-card">
+<div class="notif cq">
+<fieldset class="answer">
+<legend class="vh">Answer this reminder (example)</legend>
+<input class="vh i-none" type="radio" name="hero" id="h-none" checked aria-label="Not answered yet">
+<input class="vh i-took" type="radio" name="hero" id="h-took">
+<input class="vh i-snooze" type="radio" name="hero" id="h-snooze">
+<input class="vh i-skip" type="radio" name="hero" id="h-skip">
+<div class="head"><span class="mark mark-app" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span><div><p class="meta mono">Yepdose · now · example</p><p class="title">Metformin, 1 tablet</p><p class="sub mono">Due 8:00 pm · follow-ups at 8:10, 8:30 and 9:00</p></div></div>
+<div class="actions"><label class="took" for="h-took">Took it</label><span class="sep" aria-hidden="true">·</span><label class="snooze" for="h-snooze">Remind me in 10 min</label><span class="sep" aria-hidden="true">·</span><label class="skip" for="h-skip">Skip</label></div>
+<p class="result"><span class="r-took"><svg class="tick16" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg>Taken 8:02 pm</span><span class="r-snooze"><span class="dot amber" aria-hidden="true"></span>Snoozed. Asking again at 8:10 pm.</span><span class="r-skip"><span class="dot stone" aria-hidden="true"></span>Skipped 8:02 pm</span><label class="undo" for="h-none">Undo</label></p>
+<output class="vh" aria-live="polite" data-med="Metformin"></output>
+</fieldset>
+</div>
+<figcaption class="spec mono">
+<div><span class="m"><span class="dot" aria-hidden="true"></span>0 min</span><span class="t">reminder</span></div>
+<div><span class="m"><span class="dot" aria-hidden="true"></span>+10</span><span class="t">follow-up</span></div>
+<div><span class="m"><span class="dot amber" aria-hidden="true"></span>+30</span><span class="t">follow-up</span></div>
+<div><span class="m"><span class="dot amber" aria-hidden="true"></span>+60</span><span class="t">follow-up</span></div>
+<div><span class="m"><span class="dot clay" aria-hidden="true"></span>+120</span><span class="t">marked missed</span></div>
+</figcaption>
+</figure>
+</div>
 </section>
 
-<h2 class="wm">Reminders that don't give up</h2>
-<p class="sub">One reminder is easy to swipe away. Yepdose follows up at 10, 30 and 60 minutes, then marks the dose missed so nothing disappears silently.</p>
+<section id="ch-01" class="ch" aria-labelledby="h-01"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">01</span></div>
 <div class="grid">
-  <div class="card"><h3>One tap to log</h3><p>Answer "Took it" from the notification, a Home Screen widget, your Apple Watch, or Siri. No need to open the app.</p></div>
-  <div class="card"><h3>Any schedule</h3><p>Daily, certain days, every few hours, 21-days-on-7-off, or as needed. Time zones and clock changes handled.</p></div>
-  <div class="card"><h3>Everyone in the house</h3><p>Separate profiles for you, a parent, a child. Switch with one tap. Unlimited, free.</p></div>
+<div class="ch-label"><p class="run">It asks. You tap.</p></div>
+<div class="ch-body">
+<h2 id="h-01" class="d2">It asks. You tap. It writes it down.</h2>
+<p class="body">Add a medicine and the times you take it. At each time your phone asks. You answer with one tap: Took it, Remind me in 10 minutes, or Skip. Yepdose records the answer with the time and shows the day grouped by morning, afternoon and evening, so you can see at a glance what is done and what is next.</p>
+<div class="ledger">
+<input class="vh" type="checkbox" id="t-amlo" aria-describedby="amlo-desc">
+<p class="lbl lbl-a mono">Tuesday 8 September · 3 of 6 taken · 1 late · example</p>
+<p class="lbl lbl-b mono">Tuesday 8 September · 4 of 6 taken · next at 8:00 pm · example</p>
+<h3>Morning</h3>
+<div class="row"><span class="t mono">8:00 am</span><span class="n">Metformin <span class="dose">· 1 tablet · 500 mg</span></span><span class="st taken"><svg class="tick16" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg>taken 8:02 am</span></div>
+<div class="row"><span class="t mono">8:00 am</span><span class="n">Levothyroxine <span class="dose">· 50 µg</span></span><span class="st taken"><svg class="tick16" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg>taken 8:02 am</span></div>
+<h3>Afternoon</h3>
+<div class="row"><span class="t mono">1:00 pm</span><span class="n">Vitamin D <span class="dose">· 1 capsule</span></span><span class="st taken"><svg class="tick16" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg>taken 1:05 pm</span></div>
+<div class="row has-pill"><span class="t mono">2:00 pm</span><span class="n" id="amlo-desc">Amlodipine <span class="dose">· 1 tablet · 5 mg</span></span><span class="st st-late"><span class="dot amber" aria-hidden="true"></span>22 min late<label class="pill" for="t-amlo">Took it</label></span><span class="st st-done taken"><svg class="tick16 draw-s" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg>taken 2:22 pm</span></div>
+<h3>Evening</h3>
+<div class="row"><span class="t mono">8:00 pm</span><span class="n">Metformin <span class="dose">· 1 tablet · 500 mg</span></span><span class="st"><span class="ring" aria-hidden="true"></span>due</span></div>
+<div class="row"><span class="t mono">9:00 pm</span><span class="n">Atorvastatin <span class="dose">· 1 tablet · 20 mg</span></span><span class="st"><span class="ring" aria-hidden="true"></span>due</span></div>
+<output class="vh" aria-live="polite"></output>
 </div>
-
-<div class="two">
-  <div>
-    <div class="label">Free, forever</div>
-    <div class="list">
-      <div class="row"><div class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F6F3ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div class="t"><b>Unlimited medicines and reminders</b><span>No cap, no upsell later</span></div></div>
-      <div class="row"><div class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F6F3ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div class="t"><b>Widgets, Watch, history</b><span>And Apple Health logging</span></div></div>
-      <div class="row"><div class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F6F3ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div class="t"><b>Import from other apps</b><span>Bring your list, keep your history</span></div></div>
-      <div class="row"><div class="chk"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F6F3ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></div><div class="t"><b>iCloud sync, no account</b><span>Your Apple ID is the only login</span></div></div>
-    </div>
-  </div>
-  <div>
-    <div class="label">Family</div>
-    <div class="card" style="height:100%">
-      <h3>For when a second person needs to know</h3>
-      <p>A caregiver gets an alert when a dose is missed, can see the shared profile, and can export a PDF for the next appointment. One small yearly price or a lifetime purchase. The basics above stay free either way.</p>
-    </div>
-  </div>
+<figure class="pull"><blockquote>Four medicines, three times of day, and an app that stopped being free. She wants a list that just asks, and never a paywall on the fourth pill.</blockquote><figcaption class="mono">Written for Priya, 34 · four medicines a day · left Medisafe in January</figcaption></figure>
 </div>
+</div>
+</div></section>
 
-<footer>Yepdose is a reminder and record-keeping tool. It does not provide medical advice. Always follow the directions of your doctor or pharmacist.<br>Questions: <a href="mailto:hello@yepdose.com">hello@yepdose.com</a> · <a href="/privacy">Privacy</a> · <a href="/support">Support</a></footer>
-</main></body></html>
+<section id="ch-02" class="ch ch02" aria-labelledby="h-02"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">02</span></div>
+<div class="grid">
+<div class="ch-label"><p class="run">It follows up.</p></div>
+<div class="ch-body">
+<h2 id="h-02" class="d2">It follows up.</h2>
+<p class="body">A reminder you swipe away is gone. Yepdose asks again at 10 minutes, at 30, and at 60. At 120 it stops asking and writes missed, so the gap shows in your history instead of disappearing. The window is yours to change.</p>
+<details class="why"><summary><span class="chev" aria-hidden="true"></span>Why 10, 30 and 60?</summary><p>Ten minutes catches the dose you meant to take a moment ago. Thirty and sixty catch the one that slipped your mind. At two hours the app stops asking and writes it down instead. You can change every one of these times.</p></details>
+</div>
+<ol class="ladder ch-wide">
+<li class="step s0" style="--from:0;--to:0"><div class="pair"><div class="numcol"><span class="numeral" aria-hidden="true">0</span></div><div class="vr" aria-hidden="true"></div><div class="line"><div class="inner"><p class="lab mono"><span>8:00 pm</span></p><p class="say">Metformin, 1 tablet</p>
+<div class="notif cq"><fieldset class="answer"><legend class="vh">Answer this reminder (example)</legend>
+<input class="vh i-none" type="radio" name="ladder" id="l-none" checked aria-label="Not answered yet">
+<input class="vh i-took" type="radio" name="ladder" id="l-took">
+<input class="vh i-snooze" type="radio" name="ladder" id="l-snooze">
+<input class="vh i-skip" type="radio" name="ladder" id="l-skip">
+<div class="head"><span class="mark mark-app" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span><div><p class="meta mono">Yepdose · 8:00 pm · example</p><p class="title">Metformin, 1 tablet</p><p class="sub mono">Due 8:00 pm · follow-ups at 8:10, 8:30 and 9:00</p></div></div>
+<div class="actions"><label class="took" for="l-took">Took it</label><span class="sep" aria-hidden="true">·</span><label class="snooze" for="l-snooze">Remind me in 10 min</label><span class="sep" aria-hidden="true">·</span><label class="skip" for="l-skip">Skip</label></div>
+<p class="result"><span class="r-took"><svg class="tick16" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg>Taken 8:02 pm</span><span class="r-snooze short"><span class="dot amber" aria-hidden="true"></span>Snoozed. Asking again at 8:10 pm.</span><span class="r-snooze long"><span class="dot amber" aria-hidden="true"></span>Snoozed. Asking again at 8:10 pm, and the follow-ups start over from there.</span><span class="r-skip"><span class="dot stone" aria-hidden="true"></span>Skipped 8:02 pm</span><label class="undo" for="l-none">Undo</label></p>
+<output class="vh" aria-live="polite" data-med="Metformin"></output>
+</fieldset></div>
+</div></div></div></li>
+<li class="step s10" style="--from:0;--to:10"><div class="pair"><div class="numcol"><span class="numeral" aria-hidden="true">10</span></div><div class="vr" aria-hidden="true"></div><div class="line"><div class="inner"><p class="lab mono"><span>+10 min</span><span class="cancel">cancelled</span></p><p class="say">Still here. Metformin was due at 8:00 pm.</p></div></div></div></li>
+<li class="step s30" style="--from:10;--to:30"><div class="pair"><div class="numcol"><span class="numeral" aria-hidden="true">30</span></div><div class="vr" aria-hidden="true"></div><div class="line"><div class="inner"><p class="lab mono"><span>+30 min</span><span class="cancel">cancelled</span></p><p class="say">Third ask. Metformin is 30 minutes late.</p></div></div></div></li>
+<li class="step s60" style="--from:30;--to:60"><div class="pair"><div class="numcol"><span class="numeral" aria-hidden="true">60</span></div><div class="vr" aria-hidden="true"></div><div class="line"><div class="inner"><p class="lab mono"><span>+60 min</span><span class="cancel">cancelled</span></p><p class="say">Last follow-up. Metformin is an hour late.</p></div></div></div></li>
+<li class="step s120" style="--from:60;--to:120"><div class="pair"><div class="numcol"><span class="numeral wide" aria-hidden="true">120</span></div><div class="vr" aria-hidden="true"></div><div class="line"><div class="inner"><p class="lab mono"><span>+120 min</span><span class="cancel">cancelled</span></p><p class="say">Marked <b class="missed">missed</b>. It's in your history. With Family, the person you share with is told.</p></div></div></div></li>
+</ol>
+<div class="ch-body">
+<div class="log mono">
+<p class="lbl">What got recorded</p>
+<div><span class="m">8:00 pm</span><span class="e"><span class="dot" aria-hidden="true"></span>Reminder</span></div>
+<div class="l-took"><span class="m">8:02 pm</span><span class="e"><span class="dot fern" aria-hidden="true"></span>Taken, from the notification</span></div>
+<div class="c"><span class="m">8:10 pm</span><span class="e"><span class="dot" aria-hidden="true"></span>Follow-up<span class="cancel">cancelled</span></span></div>
+<div class="c"><span class="m">8:30 pm</span><span class="e"><span class="dot" aria-hidden="true"></span>Follow-up<span class="cancel">cancelled</span></span></div>
+<div class="c"><span class="m">9:00 pm</span><span class="e"><span class="dot" aria-hidden="true"></span>Follow-up<span class="cancel">cancelled</span></span></div>
+<div class="c"><span class="m">10:00 pm</span><span class="e"><span class="dot clay" aria-hidden="true"></span>Marked missed<span class="cancel">cancelled</span></span></div>
+</div>
+<div class="rules">
+<div><h3>Snooze restarts the ladder.</h3><p>Remind me in 10 min means exactly that. The follow-ups start over from there.</p></div>
+<div><h3>Quiet hours hold the follow-ups.</h3><p>Set quiet hours and the follow-ups wait, unless you have flagged the medicine as critical. Reminders can be marked time-sensitive so they show through Focus.</p></div>
+<div><h3>Missed is a record, not a scolding.</h3><p>Come back to a short sheet: what was missed, a reason if you want one, mark them all at once.</p></div>
+</div>
+</div>
+</div>
+</div></section>
+
+<section id="ch-03" class="ch" aria-labelledby="h-03"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">03</span></div>
+<div class="grid">
+<div class="ch-label"><p class="run">One tap, wherever you are.</p></div>
+<div class="ch-body">
+<h2 id="h-03" class="d2">One tap, wherever you are.</h2>
+<p class="body">You don't have to open the app. Answer from the notification, from a Home Screen or Lock Screen widget, from the Apple Watch app or its complication, or ask Siri. While a dose is overdue, a Live Activity keeps a countdown on the Lock Screen until you answer.</p>
+</div>
+<div class="ch-wide">
+<div class="surfaces" role="region" tabindex="0" aria-label="Five ways to log a dose">
+<figure><div class="art"><div class="notif cq"><div class="head"><span class="mark mark-app" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span><div><p class="meta mono">Yepdose · now</p><p class="title">Metformin, 1 tablet</p><p class="sub mono">Due 8:00 pm</p></div></div><div class="actions" aria-hidden="true"><span class="took">Took it</span><span class="sep">·</span><span>Remind me in 10 min</span><span class="sep">·</span><span>Skip</span></div></div></div><figcaption class="mono">Notification · Took it, Remind me in 10 min, Skip</figcaption></figure>
+<figure><div class="art"><div class="widget"><span class="k mono">Next</span><span class="time">8:00 pm</span><span class="med">Metformin</span><span class="ok" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span></div></div><figcaption class="mono">Widget · Home Screen and Lock Screen</figcaption></figure>
+<figure><div class="art"><div class="watch"><svg class="arc" viewBox="0 0 160 160" aria-hidden="true" focusable="false"><circle cx="80" cy="80" r="72" pathLength="1"/></svg><div class="mid"><span class="mark" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span><b>Took it</b></div></div></div><figcaption class="mono">Apple Watch · app and complication</figcaption></figure>
+<figure><div class="art"><p class="siri">“<span class="u">Log my dose in Yepdose</span>”</p></div><figcaption class="mono">Siri · “Log my dose in Yepdose”</figcaption></figure>
+<figure><div class="art"><div class="la"><span>Metformin · overdue</span><span class="cd" id="la-cd">12:41</span><span class="bar draw-x" aria-hidden="true"></span></div></div><figcaption class="mono">Live Activity · countdown while overdue</figcaption></figure>
+</div>
+<p class="swipe mono" aria-hidden="true">Swipe for more</p>
+</div>
+</div>
+</div></section>
+
+<section id="ch-04" class="ch" aria-labelledby="h-04"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">04</span></div>
+<div class="grid">
+<div class="ch-label"><p class="run">Any schedule. Everyone in the house.</p></div>
+<div class="ch-body">
+<h2 id="h-04" class="d2">Any schedule. Everyone in the house.</h2>
+<p class="body">Medicines are not all once a day. Yepdose schedules the way the label reads.</p>
+<dl class="index">
+<div><dt>Fixed times</dt><span class="lead" aria-hidden="true"></span><dd class="mono">8:00 am, 8:00 pm</dd></div>
+<div><dt>Several times a day</dt><span class="lead" aria-hidden="true"></span><dd class="mono">morning, midday, evening</dd></div>
+<div><dt>Every N hours</dt><span class="lead" aria-hidden="true"></span><dd class="mono">anchored to the last dose you logged</dd></div>
+<div><dt>Certain weekdays</dt><span class="lead" aria-hidden="true"></span><dd class="mono">Mon, Wed, Fri</dd></div>
+<div><dt>Every N days</dt><span class="lead" aria-hidden="true"></span><dd class="mono">every third day</dd></div>
+<div><dt>Cycles</dt><span class="lead" aria-hidden="true"></span><dd class="mono">21 days on, 7 off</dd></div>
+<div><dt>As needed</dt><span class="lead" aria-hidden="true"></span><dd class="mono">minimum gap and a daily maximum</dd></div>
+<div><dt>Fractional doses</dt><span class="lead" aria-hidden="true"></span><dd class="mono">half a tablet</dd></div>
+<div><dt>Time zones and clock changes</dt><span class="lead" aria-hidden="true"></span><dd class="mono">handled</dd></div>
+</dl>
+<p class="body">One phone can hold everyone. Add a profile for a parent or a child and switch with one tap. Profiles are unlimited and free.</p>
+<fieldset class="profiles"><legend class="vh">Choose a profile (example)</legend>
+<input class="vh" type="radio" name="profile" id="p-you" checked>
+<input class="vh" type="radio" name="profile" id="p-amma">
+<input class="vh" type="radio" name="profile" id="p-theo">
+<div class="names"><label class="l-you" for="p-you">You<svg class="ptick" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg></label><label class="l-amma" for="p-amma">Amma<svg class="ptick" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg></label><label class="l-theo" for="p-theo">Theo<svg class="ptick" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg></label></div>
+<div class="status mono"><p class="s-you">You · 4 medicines · next 8:00 pm</p><p class="s-amma">Amma · 6 medicines · shared with Ravi (Family)</p><p class="s-theo">Theo · 1 medicine · half a tablet, evenings</p></div>
+</fieldset>
+<figure class="pull"><blockquote>Two people give the evening dose on different nights. Both need to see whether it happened, and neither wants to text about it.</blockquote><figcaption class="mono">Written for Lena, 41 · a child on a long-term medicine</figcaption></figure>
+</div>
+</div>
+</div></section>
+
+<section id="ch-05" class="ch" aria-labelledby="h-05"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">05</span></div>
+<div class="grid">
+<div class="ch-label"><p class="run">The basics are free.</p></div>
+<div class="ch-body">
+<h2 id="h-05" class="d2">The basics are free. That won't change.</h2>
+<p class="body lede">Medisafe capped its free plan at two medicines on 1 January 2026. Free here covers everything one person needs. Family is for when a second person needs to know.</p>
+<table class="price">
+<caption class="vh">What is free and what Family adds</caption>
+<thead><tr><th scope="col">Feature</th><th scope="col" class="c">Free, forever</th><th scope="col" class="c">Family</th></tr></thead>
+<tbody>
+<tr class="g"><th class="grp" colspan="3" scope="rowgroup">The basics</th></tr>
+<tr><th scope="row">Unlimited medicines and reminders</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Unlimited local profiles</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Follow-ups at 10, 30 and 60 minutes</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Widgets, Watch, Siri, Live Activity</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Any schedule, fractional doses</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">History and a while-you-were-away sheet</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Import from Medisafe (CSV), Apple Health (iOS 26) or a pasted list</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">iCloud sync between your own devices, no account</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Export as JSON or CSV, delete any time</th><td class="c" data-col="Free"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+</tbody>
+<tbody>
+<tr class="g"><th class="grp" colspan="3" scope="rowgroup">Family adds</th></tr>
+<tr><th scope="row">Share a profile with a caregiver through iCloud, read-write or view-only</th><td class="c" data-col="Free"><span class="no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">The caregiver is alerted when a dose is missed or taken late</th><td class="c" data-col="Free"><span class="no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Adherence reports for 7, 30 or 90 days as PDF or CSV</th><td class="c" data-col="Free"><span class="no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Medicine lookup with strength suggestions and label warnings, informational only</th><td class="c" data-col="Free"><span class="no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+<tr><th scope="row">Refill tracking with a low-supply reminder</th><td class="c" data-col="Free"><span class="no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="c" data-col="Family"><svg class="ok" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><use href="#tick"/></svg><span class="vh">Included</span></td></tr>
+</tbody>
+<tfoot><tr><th scope="row">Price</th><td class="c" data-col="Free"><span class="p-free">$0, forever</span></td><td class="c" data-col="Family"><span class="p-fam">$19.99</span><span class="p-note">a year after a 14&#8209;day free trial</span><span class="p-life">or $39.99 once, for life</span></td></tr></tfoot>
+</table>
+<div class="alerts">
+<p class="lbl mono">What Ravi's phone shows · Family</p>
+<div><span class="m mono">Family · Yepdose · 8:30 pm</span><p class="say"><span class="dot amber" aria-hidden="true"></span>Amma: Metformin is 30 minutes late</p></div>
+<div><span class="m mono">Family · Yepdose · 8:41 pm</span><p class="say"><span class="dot fern" aria-hidden="true"></span>Amma took Metformin</p></div>
+</div>
+<div class="qs">
+<details class="q" name="family"><summary><span class="chev" aria-hidden="true"></span>What the caregiver can see</summary><p>Only the shared profile: its medicines, schedule and history. Sharing uses Apple's iCloud sharing between your own Apple accounts, and you can stop it at any time.</p></details>
+<details class="q" name="family"><summary><span class="chev" aria-hidden="true"></span>Why is sharing paid and the rest free?</summary><p>Paid features are the ones a second person benefits from. Everything one person needs stays free, with no cap.</p></details>
+</div>
+<div class="closing"><p>The basics above stay free either way.</p><a class="tlink fern" href="#ch-07">Try it free in the beta →</a></div>
+<figure class="pull"><blockquote>He doesn't need her location or her calendar. He needs to know, at 9 pm, whether the 8 pm tablet happened.</blockquote><figcaption class="mono">Written for Ravi, 58 · helping his mother from another city</figcaption></figure>
+</div>
+</div>
+</div></section>
+
+<section id="ch-06" class="ch inv" aria-labelledby="h-06"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">06</span></div>
+<div class="grid">
+<div class="ch-label"><span class="mark orn" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span><p class="run">No account, no server.</p></div>
+<div class="ch-body">
+<h2 id="h-06" class="d2">There is no account, because there is no server.</h2>
+<p class="body">Your medicines live on your phone and in your own iCloud. We don't run a server. There are no ads, no analytics and no crash-reporting kit. There is no third-party code in the app that talks to the internet. The App Store privacy label says Data Not Collected, and it says that because it is true.</p>
+<figure class="servers"><span class="mono">Yepdose servers</span><span class="none">none</span><figcaption class="mono">This box is empty on purpose.</figcaption></figure>
+<div class="pl">
+<p class="lbl">What leaves your phone, and where it goes</p>
+<div><span>Your medicine list and history</span><svg class="arrow draw-s" viewBox="0 0 48 16" aria-hidden="true" focusable="false"><path d="M2 8H45M39 2l6 6-6 6" pathLength="1"/></svg><span class="to">your private iCloud (Apple)</span></div>
+<div><span>A shared profile (Family)</span><svg class="arrow draw-s" viewBox="0 0 48 16" aria-hidden="true" focusable="false"><path d="M2 8H45M39 2l6 6-6 6" pathLength="1"/></svg><span class="to">the person you chose, through Apple iCloud sharing</span></div>
+<div><span>Purchases</span><svg class="arrow draw-s" viewBox="0 0 48 16" aria-hidden="true" focusable="false"><path d="M2 8H45M39 2l6 6-6 6" pathLength="1"/></svg><span class="to">Apple</span></div>
+<div><span>Medicine lookup (Family)</span><svg class="arrow draw-s" viewBox="0 0 48 16" aria-hidden="true" focusable="false"><path d="M2 8H45M39 2l6 6-6 6" pathLength="1"/></svg><span class="to">the name you typed, to RxNorm and openFDA, US government services</span></div>
+<div class="last"><span>Anything to us</span><svg class="arrow draw-s" viewBox="0 0 48 16" aria-hidden="true" focusable="false"><path d="M2 8H45M39 2l6 6-6 6" pathLength="1"/></svg><span class="none">nothing</span></div>
+</div>
+<p class="body after">You can export everything as JSON or CSV, and delete it, whenever you like.</p>
+<p><a class="tlink" href="/privacy">Read the privacy policy →</a></p>
+</div>
+</div>
+</div></section>
+
+<section id="ch-07" class="ch ch07" aria-labelledby="h-07"><div class="wrap">
+<div class="rule" aria-hidden="true"><span class="slug mono">07</span></div>
+<p class="dots mono"><span class="six" aria-hidden="true"><span class="dot fern"></span><span class="dot fern"></span><span class="dot fern"></span><span class="dot fern"></span><span class="dot fern"></span><span class="dot fern"></span></span><span>Tuesday 8 September · 6 of 6 taken · example</span></p>
+<h2 id="h-07" class="d1"><span class="w" style="--i:0">Try</span> <span class="w" style="--i:1">it</span> <span class="w" style="--i:2">before</span> <span class="w last" style="--i:3">December.</span></h2>
+<div class="hr draw-x" aria-hidden="true"></div>
+<div class="grid">
+<p class="body">The beta is on TestFlight now. Send an email and we'll add you. The App Store release is planned for December 2026. iOS 17 or later; watchOS 10 or later; Apple Health import needs iOS 26.</p>
+<div class="cta-slot"><div class="in"><a class="btn big" href="mailto:hello@yepdose.com?subject=Yepdose%20beta">Join the beta</a><p class="reqs">hello@yepdose.com · we reply from a person, not a system.</p></div></div>
+</div>
+</div></section>
+</main>
+<footer class="foot"><div class="wrap">
+<p class="disc">Yepdose is a reminder and record-keeping tool. It does not provide medical advice. Always follow the directions of your doctor or pharmacist.</p>
+<div class="cols">
+<div><h3>Contact</h3><ul><li><a href="mailto:hello@yepdose.com">hello@yepdose.com</a></li><li><a href="mailto:support@yepdose.com">support@yepdose.com</a></li><li><a href="mailto:privacy@yepdose.com">privacy@yepdose.com</a></li></ul></div>
+<div><h3>Pages</h3><ul><li><a href="/support">Support</a></li><li><a href="/privacy">Privacy</a></li></ul></div>
+<div><h3>This site</h3><p>Static, no cookies, no analytics. Fonts are loaded from Google Fonts; GitHub Pages keeps access logs.</p></div>
+</div>
+<p class="colophon mono"><span class="mark mark-app" aria-hidden="true"><svg viewBox="0 0 100 100" focusable="false"><use href="#tick"/></svg></span><span>Set in Bricolage Grotesque and your system font. © 2026 Yepdose.</span></p>
+</div></footer>
+</body>
+</html>
