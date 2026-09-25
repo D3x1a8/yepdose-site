@@ -6,6 +6,7 @@
   var $$ = function (s, c) { return Array.prototype.slice.call((c || doc).querySelectorAll(s)); };
   var motion = root.classList.contains('motion');
   var hasIO = 'IntersectionObserver' in window;
+  var remeasure = null;
   var say = function (el, text) { if (!el) return; el.textContent = ''; setTimeout(function () { el.textContent = text; }, 40); };
 
   /* 1. Masthead gets a backing once the page moves. */
@@ -115,7 +116,7 @@
     if (motion) {
       addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(measure); } }, { passive: true });
       addEventListener('resize', measure);
-      measure();
+      remeasure = measure;
     } else {
       paint(120);
     }
@@ -173,4 +174,8 @@
     addEventListener('scroll', function () { if (!pt) { pt = true; requestAnimationFrame(pmove); } }, { passive: true });
     pmove();
   }
+
+  /* 8. Everything is wired: the CSS failsafe that reveals content without this script can stand down. */
+  root.classList.add('live');
+  if (remeasure) remeasure();
 })();
