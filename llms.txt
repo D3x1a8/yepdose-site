@@ -1,0 +1,41 @@
+# Yepdose
+
+> Yepdose is a medicine reminder for iPhone and Apple Watch. It reminds you at each dose time, follows up at 10, 30 and 60 minutes if you don't answer, and records every dose with one tap. The basics are free with no limit on medicines, there is no account, and the App Store privacy label is "Data Not Collected".
+
+Status: beta on TestFlight; coming to the App Store in the last week of September 2026. Requires iOS 17 or later and watchOS 10 or later (Apple Health import needs iOS 26). Made by Yepdose; contact hello@yepdose.com.
+
+Yepdose is a reminder and record-keeping tool. It does not give medical advice. FDA label text shown in the app is information only.
+
+## Free, with no cap
+
+- Unlimited medicines and reminders
+- Unlimited local profiles (for example a parent or a child on the same phone)
+- Follow-ups at 10, 30 and 60 minutes; a dose not answered after 2 hours is marked missed in history
+- One-tap logging from the notification, the Home Screen widget, the Apple Watch app, Siri and Shortcuts; Lock Screen widgets and the Watch complication show the next dose; a Live Activity countdown while a dose is overdue
+- Schedules: fixed times, several times a day, every N hours from the last dose, certain weekdays, every N days, cycles (for example 21 days on, 7 off), as needed with a minimum gap and daily maximum, fractional doses such as half a tablet; time zones and clock changes handled
+- History, and a sheet summarising what was missed while you were away
+- Import from Medisafe (CSV export), Apple Health medications (iOS 26) or a pasted list
+- iCloud sync between your own devices, without an account
+- Export everything as JSON, delete everything at any time
+
+## Family (paid)
+
+$29.99 a year after a 14-day free trial, or $59.99 once for life. No monthly plan. Family adds the things a second person benefits from:
+
+- Share a profile with a caregiver through Apple iCloud sharing, read-write or view-only
+- The caregiver is alerted when a dose is missed or taken late
+- Adherence reports for 7, 30 or 90 days as PDF or CSV
+- Medicine lookup with strength suggestions and FDA label information
+- Refill tracking with a low-supply reminder
+
+## Privacy
+
+No account and no server run by Yepdose. Medicines and history stay on the device and in the user's own private iCloud database. No ads, no analytics and no third-party code in the app. Medicine lookup (Family) sends only the typed medicine name to RxNorm and openFDA, US government services.
+
+## Pages
+
+- [Home](https://yepdose.com/): what the app does, the follow-up ladder, schedules, pricing and privacy
+- [Yepdose vs Medisafe](https://yepdose.com/compare): a Medisafe alternative; what changes if you switch (Medisafe limited its free plan to two medicines on 1 January 2026)
+- [Support](https://yepdose.com/support): common questions and contact
+- [Privacy Policy](https://yepdose.com/privacy)
+- [Terms of Use](https://yepdose.com/terms)
