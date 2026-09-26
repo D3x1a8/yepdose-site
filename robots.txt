@@ -1,0 +1,5 @@
+# yepdose.com: everything here is public. Search engines and AI assistants are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://yepdose.com/sitemap.xml
