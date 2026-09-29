@@ -519,3 +519,10 @@ details p{color:var(--ink-2);padding-bottom:1.25rem;max-width:62ch}
 /* Failsafe: if site.js never finishes (blocked, failed, threw), show everything the reveal effects hid. */
 @keyframes failsafe{to{opacity:1;transform:none;stroke-dashoffset:0}}
 .motion:not(.live) [data-reveal],.motion:not(.live) .rx .rx-list div,.motion:not(.live) .ravi .alert,.motion:not(.live) .flow i,.motion:not(.live) .scrawl path{animation:failsafe .5s ease 2.5s forwards}
+
+/* film */
+.film{padding-top:clamp(2rem,5vw,4rem)}
+.reel{margin-top:clamp(1.75rem,4vw,3rem);max-width:1080px}
+.reel video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--paper-2);border:2px solid var(--ink);border-radius:20px;box-shadow:10px 10px 0 var(--amber)}
+.reel figcaption{margin-top:1.25rem;font-size:.9375rem;color:var(--stone)}
+.film-words{max-width:1080px;margin-top:1.5rem}
