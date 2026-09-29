@@ -35,7 +35,7 @@ No account and no server run by Yepdose. Medicines and history stay on the devic
 ## Pages
 
 - [Home](https://yepdose.com/): what the app does, the follow-up ladder, schedules, pricing and privacy
-- [Launch film](https://yepdose.com/video/yepdose-launch.mp4): 52-second silent overview of the app (a transcript is on the home page under "The film")
+- [Launch film](https://yepdose.com/video/yepdose-launch.mp4): 57-second overview of the app, with music (a transcript is on the home page under "The film")
 - [Yepdose vs Medisafe](https://yepdose.com/compare): a Medisafe alternative; what changes if you switch (Medisafe limited its free plan to two medicines on 1 January 2026)
 - [Support](https://yepdose.com/support): common questions and contact
 - [Privacy Policy](https://yepdose.com/privacy)
