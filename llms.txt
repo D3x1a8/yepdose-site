@@ -2,7 +2,7 @@
 
 > Yepdose is a medicine reminder for iPhone and Apple Watch. It reminds you at each dose time, follows up at 10, 30 and 60 minutes if you don't answer, and records every dose with one tap. The basics are free with no limit on medicines, there is no account, and the App Store privacy label is "Data Not Collected".
 
-Status: beta on TestFlight; coming to the App Store in the last week of September 2026. Requires iOS 17 or later and watchOS 10 or later (Apple Health import needs iOS 26). Made by Yepdose; contact hello@yepdose.com.
+Status: on the App Store, free: https://apps.apple.com/app/id6809854283 Requires iOS 17 or later and watchOS 10 or later (Apple Health import needs iOS 26). Made by Yepdose; contact hello@yepdose.com.
 
 Yepdose is a reminder and record-keeping tool. It does not give medical advice. FDA label text shown in the app is information only.
 
