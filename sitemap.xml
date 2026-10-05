@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://yepdose.com/</loc><lastmod>2026-09-30</lastmod><video:video><video:thumbnail_loc>https://yepdose.com/img/launch-poster.jpg</video:thumbnail_loc><video:title>Yepdose in under a minute</video:title><video:description>A short film, with music, of the Yepdose medicine reminder for iPhone and Apple Watch: follow-ups at 10, 30 and 60 minutes, one-tap logging, schedules, pricing and privacy.</video:description><video:content_loc>https://yepdose.com/video/yepdose-launch.mp4</video:content_loc><video:duration>57</video:duration><video:publication_date>2026-09-29</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
-  <url><loc>https://yepdose.com/compare</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://yepdose.com/support</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://yepdose.com/privacy</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://yepdose.com/terms</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://yepdose.com/</loc><lastmod>2026-10-05</lastmod><video:video><video:thumbnail_loc>https://yepdose.com/img/launch-poster.jpg</video:thumbnail_loc><video:title>Yepdose in under a minute</video:title><video:description>A short film, with music, of the Yepdose medicine reminder for iPhone and Apple Watch: follow-ups at 10, 30 and 60 minutes, one-tap logging, schedules, pricing and privacy.</video:description><video:content_loc>https://yepdose.com/video/yepdose-launch.mp4</video:content_loc><video:duration>57</video:duration><video:publication_date>2026-09-29</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://yepdose.com/compare</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://yepdose.com/support</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://yepdose.com/privacy</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://yepdose.com/terms</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>
