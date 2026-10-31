@@ -39,5 +39,6 @@ No account and no server run by Yepdose. Medicines and history stay on the devic
 - [Yepdose vs Medisafe](https://yepdose.com/compare): a Medisafe alternative; what changes if you switch (Medisafe became subscription-only outside the U.S. on 1 January 2026 and lists unlimited medicines as a Premium feature)
 - [Yepdose vs Apple Health](https://yepdose.com/vs-apple-health): how Yepdose differs from the Medications feature in Apple Health, and how to import from it
 - [Support](https://yepdose.com/support): common questions and contact
+- [Press kit](https://yepdose.com/press): facts, boilerplate in three lengths, icon, screenshots, launch film and contact for journalists; everything there may be used freely
 - [Privacy Policy](https://yepdose.com/privacy)
 - [Terms of Use](https://yepdose.com/terms)
