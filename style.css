@@ -526,3 +526,14 @@ details p{color:var(--ink-2);padding-bottom:1.25rem;max-width:62ch}
 .reel video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--paper-2);border:2px solid var(--ink);border-radius:20px;box-shadow:10px 10px 0 var(--amber)}
 .reel figcaption{margin-top:1.25rem;font-size:.9375rem;color:var(--stone)}
 .film-words{max-width:1080px;margin-top:1.5rem}
+
+/* ---------- press kit ---------- */
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:.6rem 1.5rem;margin-top:1.25rem;font-size:.95rem;line-height:1.5}
+.facts dt{font-weight:650;color:var(--ink)}
+.facts dd{color:var(--ink-2)}
+@media (max-width:520px){.facts{grid-template-columns:1fr;gap:.15rem}.facts dd{margin-bottom:.8rem}}
+.kit{display:grid;gap:1.5rem;margin-top:1.25rem}
+@media (min-width:560px){.kit{grid-template-columns:1fr 1fr}}
+.kit .thumb{display:block;height:220px;padding:.75rem;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}
+.kit .thumb img{width:100%;height:100%;object-fit:contain}
+.kit figcaption{margin-top:.6rem;font-size:.9375rem;color:var(--ink-2);line-height:1.5}
