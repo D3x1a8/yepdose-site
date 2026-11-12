@@ -24,13 +24,16 @@ $29.99 a year after a 14-day free trial, or $59.99 once for life. No monthly pla
 
 - Share a profile with a caregiver through Apple iCloud sharing, read-write or view-only
 - The caregiver is alerted when a dose is missed or taken late
+- Weekly summary: every Monday, how last week went for the people who share with you
+- Everyone today: each person's day on one screen and a widget
 - Adherence reports for 7, 30 or 90 days as PDF or CSV
 - Medicine lookup with strength suggestions and FDA label information
 - Refill tracking with a low-supply reminder
+- Scan a printed pharmacy label or prescription, or a PDF, into your medicine list, read on the iPhone only; the person checks every medicine before it is saved
 
 ## Privacy
 
-No account and no server run by Yepdose. Medicines and history stay on the device and in the user's own private iCloud database. No ads, no analytics and no third-party code in the app. Medicine lookup (Family) sends only the typed medicine name to RxNorm and openFDA, US government services.
+No account and no server run by Yepdose. Medicines and history stay on the device and in the user's own private iCloud database. No ads, no analytics and no third-party code in the app. Medicine lookup (Family) sends only the typed medicine name to RxNorm and openFDA, US government services. Scanning a label or prescription (Family) reads the photo or PDF on the iPhone; nothing is uploaded.
 
 ## Pages
 
