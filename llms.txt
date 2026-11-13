@@ -2,7 +2,7 @@
 
 > Yepdose is a medicine reminder for iPhone and Apple Watch. It reminds you at each dose time, follows up at 10, 30 and 60 minutes if you don't answer, and records every dose with one tap. The basics are free with no limit on medicines, there is no account, and the App Store privacy label is "Data Not Collected".
 
-Status: on the App Store, free: https://apps.apple.com/app/id6809854283 Requires iOS 17 or later and watchOS 10 or later (Apple Health import needs iOS 26). Made by Yepdose; contact hello@yepdose.com.
+Status: on the App Store, free: https://apps.apple.com/app/id6809854283 Requires iOS 17 or later and watchOS 10 or later (Apple Health import needs iOS 26). Made by Yepdose; contact hello@yepdose.com. The app is in English, German, Spanish, French, Italian, Japanese, Simplified Chinese and Arabic.
 
 Yepdose is a reminder and record-keeping tool. It does not give medical advice. FDA label text shown in the app is information only.
 
@@ -30,10 +30,11 @@ $29.99 a year after a 14-day free trial, or $59.99 once for life. No monthly pla
 - Medicine lookup with strength suggestions and FDA label information
 - Refill tracking with a low-supply reminder
 - Scan a printed pharmacy label or prescription, or a PDF, into your medicine list, read on the iPhone only; the person checks every medicine before it is saved
+- Add medicines by voice: say them and Yepdose writes them down, heard on the iPhone only, never uploaded; the person checks every medicine before it is saved
 
 ## Privacy
 
-No account and no server run by Yepdose. Medicines and history stay on the device and in the user's own private iCloud database. No ads, no analytics and no third-party code in the app. Medicine lookup (Family) sends only the typed medicine name to RxNorm and openFDA, US government services. Scanning a label or prescription (Family) reads the photo or PDF on the iPhone; nothing is uploaded.
+No account and no server run by Yepdose. Medicines and history stay on the device and in the user's own private iCloud database. No ads, no analytics and no third-party code in the app. Medicine lookup (Family) sends only the typed medicine name to RxNorm and openFDA, US government services. Scanning a label or prescription and adding medicines by voice (Family) happen on the iPhone; nothing is uploaded.
 
 ## Pages
 
