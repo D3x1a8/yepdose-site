@@ -41,7 +41,9 @@ No account and no server run by Yepdose. Medicines and history stay on the devic
 - [Home](https://yepdose.com/): what the app does, the follow-up ladder, schedules, pricing and privacy
 - [Launch film](https://yepdose.com/video/yepdose-launch.mp4): 57-second overview of the app, with music (a transcript is on the home page under "The film")
 - [Yepdose vs Medisafe](https://yepdose.com/compare): a Medisafe alternative; what changes if you switch (Medisafe became subscription-only outside the U.S. on 1 January 2026 and lists unlimited medicines as a Premium feature)
+- [Moving from Medisafe](https://yepdose.com/switch-from-medisafe): how to export the Medisafe report (a CSV file), import it into Yepdose, what comes across (medicine names, strength, doses recorded as taken, skipped or missed, notes) and what does not (dose amounts, schedules as such, refill counts, measurements), and what is free and what is Family
 - [Yepdose vs Apple Health](https://yepdose.com/vs-apple-health): how Yepdose differs from the Medications feature in Apple Health, and how to import from it
+- [Deutsch](https://yepdose.com/de/), [Français](https://yepdose.com/fr/), [Español](https://yepdose.com/es/): the home page, shorter, in German, French and Spanish
 - [Support](https://yepdose.com/support): common questions and contact
 - [Press kit](https://yepdose.com/press): facts, boilerplate in three lengths, icon, screenshots, launch film and contact for journalists; everything there may be used freely
 - [Privacy Policy](https://yepdose.com/privacy)

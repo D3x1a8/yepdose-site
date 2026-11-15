@@ -508,8 +508,12 @@ details p{color:var(--ink-2);padding-bottom:1.25rem;max-width:62ch}
 @media (max-width:979px){.doc-side{padding-right:120px;min-height:120px}.doc-art{position:absolute;right:-8px;top:0;width:130px;margin:0}}
 @media (max-width:600px){.spec{flex-basis:min(70vw,270px)}}
 /* ---------- doc tables (compare page) ---------- */
+/* A grid item is at least as wide as its content, and the table is 520px: without this the whole column is 520px on a phone and the text is cut off. */
+.doc-grid>*{min-width:0}
 .tblwrap{overflow-x:auto;margin-top:1.25rem;-webkit-overflow-scrolling:touch}
 .doc-body table{width:100%;border-collapse:collapse;font-size:.95rem;min-width:520px}
+.doc-body table.two{min-width:0}
+.doc-body table.two tbody th{width:40%}
 .doc-body th,.doc-body td{text-align:left;vertical-align:top;padding:.7rem .6rem .7rem 0;border-top:1.5px solid var(--line);line-height:1.5}
 .doc-body thead th{font-weight:750;border-top:0;padding-top:0}
 .doc-body tbody th{font-weight:600;color:var(--ink);width:34%}
@@ -537,3 +541,20 @@ details p{color:var(--ink-2);padding-bottom:1.25rem;max-width:62ch}
 .kit .thumb{display:block;height:220px;padding:.75rem;border:1.5px solid var(--line);border-radius:14px;background:var(--card)}
 .kit .thumb img{width:100%;height:100%;object-fit:contain}
 .kit figcaption{margin-top:.6rem;font-size:.9375rem;color:var(--ink-2);line-height:1.5}
+
+/* ---------- pages in other languages (/de/, /fr/, /es/) ---------- */
+.shots{display:flex;gap:clamp(.9rem,2vw,1.5rem);overflow-x:auto;scroll-snap-type:x mandatory;padding:2.75rem var(--gutter) 1.5rem;scrollbar-width:none;max-width:calc(var(--max) + 2*var(--gutter));margin-inline:auto}
+.shots::-webkit-scrollbar{display:none}
+.shots:focus-visible{outline-offset:-6px}
+.shots figure{flex:0 0 min(64vw,250px);scroll-snap-align:center;margin:0}
+.shots img{width:100%;height:auto;border-radius:22px;border:1.5px solid var(--line);box-shadow:0 26px 46px -30px var(--shade)}
+@media (min-width:1120px){.shots{display:grid;grid-template-columns:repeat(6,1fr);overflow:visible}}
+.nudges.still{max-width:680px;margin-top:2.75rem}
+@media (max-width:979px){.hero-title.long{font-size:clamp(2.7rem,1rem + 9vw,7rem)}}
+@media (min-width:1120px) and (max-width:1439px){html:not(:lang(en)) .w-med{font-size:.95rem}}
+@media (max-width:440px){html:not(:lang(en)) .btn.big{font-size:1.0625rem;min-height:56px;padding:.9rem 1.3rem}}
+.langs{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin-top:2.5rem;font-size:.875rem;font-weight:600}
+.langs a{text-decoration:none;padding:.3rem 0}
+.langs a:hover{color:var(--fern);text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:2px;text-underline-offset:.2em}
+.langs [aria-current]{color:var(--stone)}
+.langs+.colophon{margin-top:1.25rem}

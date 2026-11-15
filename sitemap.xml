@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-  <url><loc>https://yepdose.com/</loc><lastmod>2026-11-13</lastmod><video:video><video:thumbnail_loc>https://yepdose.com/img/launch-poster.jpg</video:thumbnail_loc><video:title>Yepdose in under a minute</video:title><video:description>A short film, with music, of the Yepdose medicine reminder for iPhone and Apple Watch: follow-ups at 10, 30 and 60 minutes, one-tap logging, schedules, pricing and privacy.</video:description><video:content_loc>https://yepdose.com/video/yepdose-launch.mp4</video:content_loc><video:duration>57</video:duration><video:publication_date>2026-09-29</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
-  <url><loc>https://yepdose.com/compare</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://yepdose.com/vs-apple-health</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://yepdose.com/press</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://yepdose.com/support</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://yepdose.com/privacy</loc><lastmod>2026-11-13</lastmod></url>
-  <url><loc>https://yepdose.com/terms</loc><lastmod>2026-11-13</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://yepdose.com/</loc><lastmod>2026-11-15</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://yepdose.com/"/><xhtml:link rel="alternate" hreflang="de" href="https://yepdose.com/de/"/><xhtml:link rel="alternate" hreflang="fr" href="https://yepdose.com/fr/"/><xhtml:link rel="alternate" hreflang="es" href="https://yepdose.com/es/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://yepdose.com/"/><video:video><video:thumbnail_loc>https://yepdose.com/img/launch-poster.jpg</video:thumbnail_loc><video:title>Yepdose in under a minute</video:title><video:description>A short film, with music, of the Yepdose medicine reminder for iPhone and Apple Watch: follow-ups at 10, 30 and 60 minutes, one-tap logging, schedules, pricing and privacy.</video:description><video:content_loc>https://yepdose.com/video/yepdose-launch.mp4</video:content_loc><video:duration>57</video:duration><video:publication_date>2026-09-29</video:publication_date><video:family_friendly>yes</video:family_friendly></video:video></url>
+  <url><loc>https://yepdose.com/de/</loc><lastmod>2026-11-15</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://yepdose.com/"/><xhtml:link rel="alternate" hreflang="de" href="https://yepdose.com/de/"/><xhtml:link rel="alternate" hreflang="fr" href="https://yepdose.com/fr/"/><xhtml:link rel="alternate" hreflang="es" href="https://yepdose.com/es/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://yepdose.com/"/></url>
+  <url><loc>https://yepdose.com/fr/</loc><lastmod>2026-11-15</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://yepdose.com/"/><xhtml:link rel="alternate" hreflang="de" href="https://yepdose.com/de/"/><xhtml:link rel="alternate" hreflang="fr" href="https://yepdose.com/fr/"/><xhtml:link rel="alternate" hreflang="es" href="https://yepdose.com/es/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://yepdose.com/"/></url>
+  <url><loc>https://yepdose.com/es/</loc><lastmod>2026-11-15</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://yepdose.com/"/><xhtml:link rel="alternate" hreflang="de" href="https://yepdose.com/de/"/><xhtml:link rel="alternate" hreflang="fr" href="https://yepdose.com/fr/"/><xhtml:link rel="alternate" hreflang="es" href="https://yepdose.com/es/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://yepdose.com/"/></url>
+  <url><loc>https://yepdose.com/compare</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://yepdose.com/switch-from-medisafe</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://yepdose.com/vs-apple-health</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://yepdose.com/press</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://yepdose.com/support</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://yepdose.com/privacy</loc><lastmod>2026-11-15</lastmod></url>
+  <url><loc>https://yepdose.com/terms</loc><lastmod>2026-11-15</lastmod></url>
 </urlset>

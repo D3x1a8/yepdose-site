@@ -8,6 +8,9 @@
   var hasIO = 'IntersectionObserver' in window;
   var remeasure = null;
   var say = function (el, text) { if (!el) return; el.textContent = ''; setTimeout(function () { el.textContent = text; }, 40); };
+  /* Pages in other languages (/de/, /fr/, /es/) carry the hero demo's words in <script type="application/json" id="i18n">. */
+  var L = {};
+  try { var words = $('#i18n'); if (words) L = JSON.parse(words.textContent) || {}; } catch (e) { L = {}; }
 
   /* 1. Masthead gets a backing once the page moves. */
   var mast = $('.mast');
@@ -35,6 +38,7 @@
     var hand = $('.hand', art), marks = $$('.mk', art), stamp = $('.stamp', art);
     var card = $('.demo', art), actions = $('.n-actions', card), result = $('.n-result', card), msg = $('.n-msg', card), live = $('#demo-live'), when = $('.n-when', card);
     var STOPS = [0, 10, 30, 60, 120], LOOP = 26000, HOLD = 2600;
+    var NOW = L.now || 'now', AGO = L.ago || '{n} min ago';
     var deg = function (min) { return Math.min(min, 120) / 120 * 300; };
     var state = 'idle', start = performance.now(), lastMin = -1, raf = null, inView = true, visible = true;
     var setHand = function (d) { hand.style.setProperty('--hand', d + 'deg'); };
@@ -48,18 +52,18 @@
       STOPS.forEach(function (s, i) { if (lastMin < s && min >= s) ping(i); });
       lastMin = min;
       setHand(deg(min));
-      when.textContent = min < 1 ? 'now' : Math.round(min) + ' min ago';
+      when.textContent = min < 1 ? NOW : AGO.replace('{n}', Math.round(min));
       raf = requestAnimationFrame(frame);
     };
     var go = function () { if (motion && !raf && state === 'idle' && visible) raf = requestAnimationFrame(frame); };
     if (!motion) setHand(25);
-    var STAMPS = { took: ['Taken', '8:02 pm'], snooze: ['Snoozed', 'till 8:10 pm'], skip: ['Skipped', '8:02 pm'] };
-    var MSGS = { took: 'Taken 8:02 pm', snooze: 'Snoozed. Asking again at 8:10 pm.', skip: 'Skipped 8:02 pm' };
-    var LIVE = { took: 'Taken, 8:02 pm, Metformin', snooze: 'Snoozed, asking again at 8:10 pm, Metformin', skip: 'Skipped, 8:02 pm, Metformin', idle: 'Not answered, Metformin' };
+    var STAMPS = L.stamps || { took: ['Taken', '8:02 pm'], snooze: ['Snoozed', 'till 8:10 pm'], skip: ['Skipped', '8:02 pm'] };
+    var MSGS = L.msgs || { took: 'Taken 8:02 pm', snooze: 'Snoozed. Asking again at 8:10 pm.', skip: 'Skipped 8:02 pm' };
+    var LIVE = L.live || { took: 'Taken, 8:02 pm, Metformin', snooze: 'Snoozed, asking again at 8:10 pm, Metformin', skip: 'Skipped, 8:02 pm, Metformin', idle: 'Not answered, Metformin' };
     var setState = function (s) {
       state = s; art.setAttribute('data-state', s);
       if (s === 'idle') {
-        result.hidden = true; actions.hidden = false; start = performance.now(); lastMin = -1; when.textContent = 'now';
+        result.hidden = true; actions.hidden = false; start = performance.now(); lastMin = -1; when.textContent = NOW;
         if (!motion) setHand(25);
         go(); $('.n-btn', card).focus();
       } else {
