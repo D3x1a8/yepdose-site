@@ -15,7 +15,11 @@
   /* 0. Language: remember one the visitor picks (on this device only, never sent), so the home page's
      automatic choice does not undo it. The menu closes on Escape or a click outside it. */
   doc.addEventListener('click', function (e) {
-    var a = e.target.closest && e.target.closest('.lang a[hreflang], .langs a[hreflang]');
+    /* A pick is a click in the language menu or footer row, or on any link that leads to another language
+       (the "English version" link on a translated legal page, for one). */
+    var a = e.target.closest && e.target.closest('a[hreflang]');
+    if (a && !a.closest('.lang, .langs') && a.getAttribute('hreflang') === root.lang) a = null;
+    if (a && !/^\/(?!\/)/.test(a.getAttribute('href') || '')) a = null;
     if (a) { try { localStorage.setItem('yd-lang', a.getAttribute('hreflang')); } catch (err) {} }
     $$('.lang[open]').forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
   });
