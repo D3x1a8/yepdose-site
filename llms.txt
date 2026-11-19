@@ -11,6 +11,7 @@ Yepdose is a reminder and record-keeping tool. It does not give medical advice. 
 - Unlimited medicines and reminders
 - Unlimited local profiles (for example a parent or a child on the same phone)
 - Follow-ups at 10, 30 and 60 minutes; a dose not answered after 2 hours is marked missed in history
+- Keep reminding (optional, per medicine, free; since version 1.3.0): after the last follow-up, a reminder every 5 minutes for up to an hour, until the dose is taken, skipped or counts as missed
 - One-tap logging from the notification, the Home Screen widget, the Apple Watch app, Siri and Shortcuts; Lock Screen widgets and the Watch complication show the next dose; a Live Activity countdown while a dose is overdue
 - Schedules: fixed times, several times a day, every N hours from the last dose, certain weekdays, every N days, cycles (for example 21 days on, 7 off), as needed with a minimum gap and daily maximum, fractional doses such as half a tablet; time zones and clock changes handled
 - History, and a sheet summarising what was missed while you were away
