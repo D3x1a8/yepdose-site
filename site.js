@@ -12,6 +12,18 @@
   var L = {};
   try { var words = $('#i18n'); if (words) L = JSON.parse(words.textContent) || {}; } catch (e) { L = {}; }
 
+  /* 0. Language: remember one the visitor picks (on this device only, never sent), so the home page's
+     automatic choice does not undo it. The menu closes on Escape or a click outside it. */
+  doc.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('.lang a[hreflang], .langs a[hreflang]');
+    if (a) { try { localStorage.setItem('yd-lang', a.getAttribute('hreflang')); } catch (err) {} }
+    $$('.lang[open]').forEach(function (d) { if (!d.contains(e.target)) d.open = false; });
+  });
+  doc.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    $$('.lang[open]').forEach(function (d) { d.open = false; var s = $('summary', d); if (s) s.focus(); });
+  });
+
   /* 1. Masthead gets a backing once the page moves. */
   var mast = $('.mast');
   var onScrollMast = function () { if (mast) mast.classList.toggle('scrolled', scrollY > 8); };

@@ -553,6 +553,22 @@ details p{color:var(--ink-2);padding-bottom:1.25rem;max-width:62ch}
 @media (max-width:979px){.hero-title.long{font-size:clamp(2.7rem,1rem + 9vw,7rem)}}
 @media (min-width:1120px) and (max-width:1439px){html:not(:lang(en)) .w-med{font-size:.95rem}}
 @media (max-width:440px){html:not(:lang(en)) .btn.big{font-size:1.0625rem;min-height:56px;padding:.9rem 1.3rem}}
+.lang{position:relative;border:0;margin:0;padding:0}
+.lang summary::after{display:none}
+.lang summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.3rem;min-height:44px;font-weight:600;font-size:inherit;justify-content:flex-start;letter-spacing:.02em;-webkit-user-select:none;user-select:none}
+.lang summary::-webkit-details-marker{display:none}
+.lang summary svg{width:1.15em;height:1.15em;flex:none}
+.lang summary:hover,.lang[open] summary{color:var(--fern)}
+.lang-menu{position:absolute;right:0;top:calc(100% + .35rem);z-index:60;min-width:11.5rem;padding:.4rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.16)}
+.lang-menu ul{list-style:none;margin:0;padding:0}
+.mast nav .lang-menu a{display:block;padding:.6rem .75rem;border-radius:9px;text-decoration:none}
+.mast nav .lang-menu a::after{display:none}
+.mast nav .lang-menu a:hover{background:var(--paper-2)}
+.lang-menu [aria-current]{color:var(--fern)}
+.lang-menu [aria-current]::before{content:"✓ ";font-weight:700}
+.lang-note{margin:.25rem 0 0;padding:.5rem .75rem .35rem;border-top:1px solid var(--line);font-size:.8125rem;font-weight:500;color:var(--stone)}
+@media (max-width:480px){.lang summary span{display:none}.lang summary{width:32px;justify-content:center}.lang summary svg{width:1.35em;height:1.35em}}
+@media (max-width:350px){.mast .lang{display:none}}
 .langs{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin-top:2.5rem;font-size:.875rem;font-weight:600}
 .langs a{text-decoration:none;padding:.3rem 0}
 .langs a:hover{color:var(--fern);text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:2px;text-underline-offset:.2em}
