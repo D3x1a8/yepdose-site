@@ -1,20 +1,29 @@
-/* yepdose.com: open an English page in German, French or Spanish when that is the visitor's language.
+/* yepdose.com: open an English page in the visitor's language when the site has it.
    A language the visitor picked (yd-lang, kept on this device by site.js) wins; otherwise the first of the
    browser's languages this site has. Read here, sent nowhere: no location lookup, no cookie.
-   Loaded in <head> of the English pages only, so an address under /de/, /fr/ or /es/ is never redirected.
-   P is the list of pages that exist in all four languages; scripts/check-site-langs.py keeps it honest. */
+   Loaded in <head> of the English pages only, so an address under /de/, /fr/ and the rest is never redirected.
+   S is the list of language folders and P the list of pages that exist in every language;
+   scripts/check-site-langs.py keeps both honest. */
 (function () {
   try {
-    var S = ['en', 'de', 'fr', 'es'];
+    var S = ['en', 'de', 'fr', 'es', 'it', 'ja', 'zh', 'ar'];
     var P = ['/', '/press', '/compare', '/switch-from-medisafe', '/vs-apple-health', '/support', '/privacy', '/terms'];
     var p = location.pathname.replace(/\.html$/, '').replace(/\/index$/, '/');
     if (p.length > 1) p = p.replace(/\/$/, '');
     if (P.indexOf(p) < 0) return;
+    /* A browser tag to a folder: "de-CH" is de, "zh-Hans-CN" is zh. The Chinese pages are Simplified, so a
+       browser set to Traditional Chinese (zh-TW, zh-HK, zh-MO, zh-Hant) is not sent to them. */
+    var base = function (tag) {
+      var t = String(tag || '').toLowerCase();
+      if (/^zh-(hant|tw|hk|mo)\b/.test(t)) return '';
+      return t.split('-')[0];
+    };
     var pick = function (list, stored) {
-      if (S.indexOf(stored) >= 0) return stored;
+      var s = String(stored || '').toLowerCase().split('-')[0];
+      if (s && S.indexOf(s) >= 0) return s;
       for (var i = 0; i < list.length; i++) {
-        var b = String(list[i] || '').toLowerCase().split('-')[0];
-        if (S.indexOf(b) >= 0) return b;
+        var b = base(list[i]);
+        if (b && S.indexOf(b) >= 0) return b;
       }
       return 'en';
     };

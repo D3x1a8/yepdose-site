@@ -575,3 +575,33 @@ details p{color:var(--ink-2);padding-bottom:1.25rem;max-width:62ch}
 .langs a:hover{color:var(--fern);text-decoration:underline;text-decoration-color:var(--amber);text-decoration-thickness:2px;text-underline-offset:.2em}
 .langs [aria-current]{color:var(--stone)}
 .langs+.colophon{margin-top:1.25rem}
+/* Japanese, Simplified Chinese, Arabic. The site's own fonts have none of these letters and the site asks no one
+   else for fonts, so the device's fonts draw them; a slanted style and tight Latin spacing do not suit them. */
+:lang(ja){--display:"Young Serif","Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;--italic:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP",serif;--sans:"Schibsted Grotesk","Hiragino Sans","Yu Gothic UI","Noto Sans CJK JP",system-ui,sans-serif}
+:lang(zh-Hans){--display:"Young Serif","Songti SC","Noto Serif CJK SC",serif;--italic:"Songti SC","Noto Serif CJK SC",serif;--sans:"Schibsted Grotesk","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif}
+:lang(ar){--display:"Young Serif","Geeza Pro","Noto Naskh Arabic","Segoe UI",Tahoma,serif;--italic:"Geeza Pro","Noto Naskh Arabic","Segoe UI",Tahoma,serif}
+:lang(ja) em,:lang(zh-Hans) em,:lang(ar) em,:lang(ja) i,:lang(zh-Hans) i,:lang(ar) i,
+:lang(ja) :is(.q,.siri,.per,.plus-free,.scrawl,.sv-none,blockquote),:lang(zh-Hans) :is(.q,.siri,.per,.plus-free,.scrawl,.sv-none,blockquote),:lang(ar) :is(.q,.siri,.per,.plus-free,.scrawl,.sv-none,blockquote){font-style:normal}
+:lang(ja) :is(h1,h2,h3,.h2,.h3,.hero-title),:lang(zh-Hans) :is(h1,h2,h3,.h2,.h3,.hero-title){line-height:1.22;letter-spacing:0;line-break:strict}
+:lang(ja) .h2,:lang(zh-Hans) .h2{max-width:11em}
+:lang(ja) body,:lang(zh-Hans) body{line-height:1.75;line-break:strict}
+:lang(ar) *{letter-spacing:0!important}
+:lang(ar) :is(h1,h2,h3,.h2,.h3,.hero-title){line-height:1.4}
+:lang(ar) body{line-height:1.8}
+/* Right to left (Arabic). Flex and grid mirror by themselves; these are the rules that name a side. */
+[dir=rtl] .btn-ghost{text-align:right}
+[dir=rtl] .btn .arr{display:inline-block;transform:scaleX(-1)}
+[dir=rtl] .btn:hover .arr{transform:scaleX(-1) translateX(4px)}
+[dir=rtl] .tape-track{direction:ltr}
+[dir=rtl] .quote{padding-left:0;padding-right:1.75rem;border-left:0;border-right:3px solid var(--amber)}
+[dir=rtl] .ticket li{padding-left:0;padding-right:1.9rem}
+[dir=rtl] .ticket li::before{left:auto;right:.3rem}
+[dir=rtl] .rx-list dd{text-align:left}
+[dir=rtl] .doc-body th,[dir=rtl] .doc-body td{text-align:right;padding:.7rem 0 .7rem .6rem}
+[dir=rtl] .lang-menu{right:auto;left:0}
+[dir=rtl] .flow i{transform:scaleX(-1)}
+[dir=rtl] .nudge .x{right:auto;left:1rem}
+@media (max-width:979px){[dir=rtl] .doc-side{padding-right:0;padding-left:120px}[dir=rtl] .doc-art{right:auto;left:-8px}}
+@media (max-width:600px){[dir=rtl] .flow .to::before{content:"← "}}
+@media (max-width:520px){[dir=rtl] .rx-list dd{text-align:right}}
+@media (max-width:400px){[dir=rtl] .mast .btn-sm{font-size:.8125rem;padding-left:.65rem;padding-right:.65rem}}

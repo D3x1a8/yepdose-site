@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Medisafeからの移行：薬を書き出してYepdoseに読み込む</title>
+<meta name="description" content="iPhoneで使える、無料のMedisafeの代替アプリ。MedisafeのレポートをCSVで書き出してYepdoseに読み込む方法、引き継がれるもの、引き継がれないもの、無料のもの。2026年11月15日確認。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4EFE4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14130F" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://yepdose.com/ja/switch-from-medisafe">
+<link rel="alternate" hreflang="en" href="https://yepdose.com/switch-from-medisafe">
+<link rel="alternate" hreflang="de" href="https://yepdose.com/de/switch-from-medisafe">
+<link rel="alternate" hreflang="fr" href="https://yepdose.com/fr/switch-from-medisafe">
+<link rel="alternate" hreflang="es" href="https://yepdose.com/es/switch-from-medisafe">
+<link rel="alternate" hreflang="it" href="https://yepdose.com/it/switch-from-medisafe">
+<link rel="alternate" hreflang="ja" href="https://yepdose.com/ja/switch-from-medisafe">
+<link rel="alternate" hreflang="zh-Hans" href="https://yepdose.com/zh/switch-from-medisafe">
+<link rel="alternate" hreflang="ar" href="https://yepdose.com/ar/switch-from-medisafe">
+<link rel="alternate" hreflang="x-default" href="https://yepdose.com/switch-from-medisafe">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://yepdose.com/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Yepdose：飲み忘れを、そのままにしない。iPhoneとApple Watchのお薬リマインダー。">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Yepdose">
+<meta property="og:title" content="MedisafeからYepdoseへの移行">
+<meta property="og:description" content="Medisafeのレポートを書き出してYepdoseに読み込み、何が引き継がれるかを確認できます。薬は無制限で無料、アカウントも不要です。">
+<meta property="og:url" content="https://yepdose.com/ja/switch-from-medisafe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yepdose.com/img/og.png">
+<meta name="twitter:title" content="MedisafeからYepdoseへの移行">
+<meta name="twitter:description" content="Medisafeのレポートを書き出してYepdoseに読み込み、何が引き継がれるかを確認できます。薬は無制限で無料、アカウントも不要です。">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/young-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=2026111902">
+<script>document.documentElement.className+=' js'+(matchMedia('(prefers-reduced-motion: no-preference)').matches?' motion':'')</script>
+<script src="/site.js?v=2026111902" defer></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://yepdose.com/ja/switch-from-medisafe","url":"https://yepdose.com/ja/switch-from-medisafe","name":"Medisafeからの移行：薬を書き出してYepdoseに読み込む","description":"iPhoneで使える、無料のMedisafeの代替アプリ。MedisafeのレポートをCSVで書き出してYepdoseに読み込む方法、引き継がれるもの、引き継がれないもの、無料のもの。2026年11月15日確認。","isPartOf":{"@id":"https://yepdose.com/#website"},"inLanguage":"ja","about":{"@id":"https://yepdose.com/#app"},"datePublished":"2026-11-15","dateModified":"2026-11-15"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Yepdose","item":"https://yepdose.com/"},{"@type":"ListItem","position":2,"name":"Medisafeからの移行","item":"https://yepdose.com/ja/switch-from-medisafe"}]}]}</script>
+</head>
+<body>
+<a class="skiplink" href="#main">本文へスキップ</a>
+<svg class="defs" aria-hidden="true" focusable="false">
+  <symbol id="tick" viewBox="0 0 100 100"><path d="M24 46 L44 66 L76 26" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 66 V88" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <filter id="wobble" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".028" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+  <clipPath id="sun-low"><rect x="300" y="178" width="260" height="120"/></clipPath>
+  <pattern id="halftone" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><circle class="ht-clay" cx="4.5" cy="4.5" r="2.1"/></pattern>
+  <pattern id="halftone-fine" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-15)"><circle class="ht-ink" cx="3" cy="3" r="1.2"/></pattern>
+</svg>
+
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="brand" href="/ja/" aria-label="Yepdose、ホーム"><span class="appmark" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#tick"/></svg></span><span class="word">Yepdose</span></a>
+    <nav aria-label="サイト">
+      <a class="hide-sm" href="/ja/#ladder">しくみ</a>
+      <a class="hide-sm" href="/ja/#pricing">料金</a>
+      <a class="hide-sm" href="/ja/compare">Medisafeとの比較</a>
+      <a class="hide-sm" href="/ja/privacy">プライバシー</a>
+      <a href="/ja/support">サポート</a>
+      <details class="lang"><summary aria-label="言語: 日本語"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></g></svg><span>JA</span></summary><div class="lang-menu"><ul><li><a href="/switch-from-medisafe" hreflang="en" lang="en">English</a></li><li><a href="/de/switch-from-medisafe" hreflang="de" lang="de">Deutsch</a></li><li><a href="/fr/switch-from-medisafe" hreflang="fr" lang="fr">Français</a></li><li><a href="/es/switch-from-medisafe" hreflang="es" lang="es">Español</a></li><li><a href="/it/switch-from-medisafe" hreflang="it" lang="it">Italiano</a></li><li><a href="/ja/switch-from-medisafe" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a href="/zh/switch-from-medisafe" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li><li><a href="/ar/switch-from-medisafe" hreflang="ar" lang="ar">العربية</a></li></ul></div></details>
+      <a class="btn btn-sm" href="https://apps.apple.com/jp/app/apple-store/id6809854283?pt=129425905&amp;ct=site-ja-switch&amp;mt=8">アプリを入手</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <div class="wrap doc-grid">
+    <aside class="doc-side">
+      <p class="kicker"><span class="no" aria-hidden="true">Y</span>乗り換え</p>
+      <h1><em>Medisafe</em>からの移行</h1>
+      <svg class="doc-art" viewBox="0 0 260 260" aria-hidden="true" focusable="false"><rect class="amberfill" x="28" y="92" width="96" height="96" rx="22" transform="rotate(-8 76 140)" filter="url(#wobble)"/><rect class="fernfill" x="136" y="72" width="104" height="104" rx="24" transform="rotate(6 188 124)" filter="url(#wobble)"/><circle cx="130" cy="200" r="34" fill="url(#halftone)"/></svg>
+    </aside>
+    <div class="doc-body">
+<p class="lede">薬と服用履歴は、1つのファイルでMedisafeから持ち出し、数分でYepdoseに取り込めます。このページでは、書き出し、読み込み、引き継がれるものと引き継がれないもの、そしてYepdoseで料金がかかるものを説明します。2026年11月15日に確認しました。</p>
+<p>Yepdoseは、iPhoneとApple Watchのお薬リマインダーです。薬もリマインダーも無制限で無料、アカウントはなく、読み込みも無料のアプリに含まれています。Androidやウェブでは使えません。機能ごとの比較表は、<a class="tlink" href="/ja/compare">YepdoseとMedisafeの比較</a>をご覧ください。</p>
+
+<h2>始める前に</h2>
+<p>必要なのは、<a class="tlink" href="https://apps.apple.com/jp/app/apple-store/id6809854283?pt=129425905&amp;ct=site-ja-switch&amp;mt=8">App StoreのYepdose</a>を入れたiOS 17以降のiPhoneと、インストールされてサインインしたままのMedisafeです。MedisafeはAppleの「メール」アプリを通じてレポートをメールで送るため、iPhoneの「メール」にアカウントが設定されている必要があります（Medisafeは<a class="tlink" href="https://help-center.medisafe.com/en/articles/9293147-error-message-when-exporting-a-report-on-ios">書き出しエラーに関するヘルプ記事</a>でそう説明しています）。Yepdoseのスケジュールがすべて正しくなるまで、Medisafeのリマインダーはオンのままにしておいてください。</p>
+
+<h2>1. Medisafeからレポートを書き出す</h2>
+<p>以下はMedisafe自身によるiPhone向けの手順で、同社のヘルプ記事<a class="tlink" href="https://help-center.medisafe.com/en/articles/8103174-how-can-i-share-a-report-of-my-medication-history">How can I share a report of my medication history?</a>によるものです。</p>
+<h3>Medisafeで</h3><p>下のメニューの「Manage」、「Report」、「Send」の順にタップします。自分のメールアドレスを入力し、開始日と終了日を選んで送信します。Medisafeによると、レポートは最長1年前までさかのぼり、CSVファイルです。「Export to Excel」と表示される場合もありますが、同じファイルです。</p>
+<h3>iPhoneで</h3><p>「メール」でそのメールを開き、添付ファイルをタッチして押さえたままにし、「ファイルに保存」を選びます。保存した場所を覚えておいてください。</p>
+<h3>Medisafeがロックされている場合</h3><p>米国外では、Medisafeは2026年1月1日からサブスクリプションが必要になっています。同社の<a class="tlink" href="https://help-center.medisafe.com/en/articles/13052285-medisafe-is-now-a-fully-paid-app-for-users-outside-the-u-s">この変更に関するヘルプ記事</a>には、アプリを開けなくなった人も、「Support and data management」の「Export data」で履歴のレポートを引き続きダウンロードできると書かれています。このファイルを私たちはテストしていません。Yepdoseが認識できない場合は、代わりにリストを貼り付けて薬を追加してください（手順2）。</p>
+
+<h2>2. ファイルをYepdoseに読み込む</h2>
+<h3>読み込み画面を開く</h3><p>Yepdoseで、「設定」→「薬を読み込む」→「Medisafe」と進み、保存したファイルを選びます。Yepdose 1.0.2以降が入っているiPhoneでこのページを読んでいますか？ここから直接<a class="tlink" href="yepdose://import">読み込み画面を開き</a>、「Medisafe」をタップしてください。</p>
+<h3>保存される前に確認する</h3><p>YepdoseはiPhone上でファイルを読み取り、確認用のリストを表示します。薬ごとに1行で、名前、含量、Yepdoseが割り出したスケジュール、一緒に付いてきた過去の服用の件数が表示されます。行をタップすると、名前や含量を修正できます。不要な薬はチェックを外してください。「読み込む」をタップするまで、何も保存されません。</p>
+<h3>2回読み込んでも大丈夫です</h3><p>同じファイルをもう一度読み込んでも、あとで新しい書き出しファイルを読み込んでも、服用が重複することはありません。同じ名前と含量の薬がすでにある場合は、重ねて追加されるのではなく、その薬がそのまま使われます。Yepdoseですでに記録した服用は、記録したとおりに保たれます。</p>
+<h3>ファイルがない場合は、リストを貼り付ける</h3><p>「設定」→「薬を読み込む」→「リストを貼り付け」では、1行に1つの薬を書いたテキストなら何でも読み込めます。たとえば「メトホルミン 500 mg 1日2回」のように書きます。この方法では薬は引き継がれますが、履歴は引き継がれません。</p>
+
+<h2>3. すべての薬を一度確認する</h2>
+<p>Medisafeのファイルは服用の記録であって、スケジュールのコピーではありません。Yepdoseはその記録からそれぞれのスケジュールを割り出すため、頼りにする前に、それぞれの薬を確認してください。</p>
+<h3>曜日と時刻</h3><p>Yepdoseは、服用がどの日に当たるか（毎日、特定の曜日、数日おき、または21日飲んで7日休むといった周期）と、どの時刻が規則的に出てくるかを読み取ります。履歴が7日分に満たない場合や、パターンを読み取れない場合は、確認画面でそのスケジュールに「推定」と表示し、毎日に設定します。その薬を開いて、飲む曜日と時刻を設定してください。</p>
+<h3>量と剤形</h3><p>ファイルにはどれだけ飲むかが書かれていないため、どの薬も1回1錠として読み込まれます。半錠、2カプセル、滴剤、注射の場合は、変更してください。</p>
+<h3>必要なときに飲む薬</h3><p>必要なときだけ飲む薬は、決まった時刻が付いた状態で読み込まれます。スケジュールを「必要なとき」に変更してください。</p>
+<h3>日付</h3><p>書き出しファイルの日付が日を先に書く形式（10月5日が5/10/2026）の場合は、「履歴」で過去の服用をいくつか確かめてください。Yepdoseは、ファイルの中に日を先としてしか読めない日付が1つでもあれば、そのファイルを日が先の形式として読み取ります。すべての日付がどちらにも読めるファイルは、月が先の形式として読み取ります。</p>
+<h3>そのあと、もう一方のリマインダーをオフにする</h3><p>すべてのスケジュールが正しくなったら、二重に聞かれないようにMedisafeのリマインダーを止めます。iPhoneの「設定」で「通知」→「Medisafe」と進み、「通知を許可」をオフにするか、アプリを削除してください。Medisafeの料金をApple経由で支払っている場合、アプリを削除してもサブスクリプションは終了しません。サブスクリプションは、iPhoneの「設定」で自分の名前 →「サブスクリプション」にあります。</p>
+
+<h2>引き継がれるもの、引き継がれないもの</h2>
+<div class="tblwrap">
+<table class="two">
+  <thead><tr><th scope="col">Medisafeでは</th><th scope="col">読み込み後のYepdoseでは</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">薬の名前</th><td>はい</td></tr>
+    <tr><th scope="row">含量</th><td>はい。「メトホルミン 500 mg」のように、名前の末尾に書かれている場合です。そうでなければ、確認画面で追加してください。</td></tr>
+    <tr><th scope="row">服用済み、スキップ、飲み忘れとして記録された服用</th><td>はい。それぞれの予定時刻と記録された時刻も一緒です。「履歴」に表示され、服用状況の数値に含まれます。</td></tr>
+    <tr><th scope="row">服用に付けたメモ</th><td>はい。その服用と一緒に保存されます</td></tr>
+    <tr><th scope="row">スケジュール</th><td>コピーではなく、履歴から割り出します。それぞれ確認してください。</td></tr>
+    <tr><th scope="row">1回量と剤形</th><td>いいえ。どの薬も1回1錠として読み込まれます。</td></tr>
+    <tr><th scope="row">保留中またはスヌーズ中の服用</th><td>いいえ</td></tr>
+    <tr><th scope="row">書き出した期間に記録が何もない薬</th><td>いいえ。手動で追加するか、もっと長い期間を書き出してください。</td></tr>
+    <tr><th scope="row">測定値とトラッカー</th><td>いいえ。読み取るのは薬の行だけです。</td></tr>
+    <tr><th scope="row">補充の残数、予約、医師、Medfriend</th><td>いいえ。ファイルに含まれていません。Yepdoseでは、補充リマインダーと見守る人との共有はFamilyの機能で、新しく設定します。</td></tr>
+    <tr><th scope="row">1年より前の履歴</th><td>いいえ。Medisafeのレポートでさかのぼれるのは最長1年です。</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Yepdoseが読み取るファイルには6つの列があります：Type、Name、Recorded on、Scheduled for、Value、Notes。Medisafeがこれらの列以外に保存しているものは、ファイルに含まれていません。</p>
+
+<h2>Yepdoseで無料のもの、有料のもの</h2>
+<h3>無料</h3><p>薬もリマインダーも無制限。返事がないときは10分後、30分後、60分後に再通知し、2時間たつと履歴に飲み忘れと記録されます。通知、ホーム画面のウィジェット、Apple Watchアプリ、Siriからワンタップで服用を記録。あらゆる種類のスケジュール。親や子どものための、iPhone上の無制限のプロフィール。履歴、読み込み、あなた自身のデバイス間のiCloud同期。アカウントなし、広告なし、何も収集しません。基本機能は無料です。これは変わりません。</p>
+<h3>Family（有料）</h3><p>14日間の無料体験のあと年額$29.99、または買い切りで$59.99（米国での価格）。Familyは、もう一人のための機能です：見守る人とのプロフィールの共有、服用が飲み忘れになったり遅れたりしたときにその人のiPhoneに届く通知、週間まとめ、PDFとCSVのレポート。ほかに、FDAラベルの情報を見られる薬の検索、補充リマインダー、印刷されたラベルや処方箋のスキャン、声で薬を追加する機能もあります。</p>
+<h3>比較のために</h3><p>Medisafeのヘルプセンターによると、米国外では2026年1月1日からアプリにサブスクリプションが必要で、料金は月額$4.99または年額$39.99です。また、無制限の薬をPremiumの機能に挙げています。これらの情報は、2026年11月15日以降に変更されている可能性があります。</p>
+
+<h2>手放すことになるもの</h2>
+<p>MedisafeはAndroidとウェブで動き、薬の相互作用チェックがあります。YepdoseはiPhoneとApple Watch専用で、相互作用チェックはありません。Familyでは、FDAラベルの文章を情報提供のみを目的として表示します。ご家庭にAndroidを使っている方がいる場合、現時点では、その方にYepdoseは合いません。</p>
+
+<h2>質問</h2>
+<h3>アカウントは必要ですか？</h3><p>いいえ。Yepdoseには登録がありません。薬は、あなたのiPhoneとあなた自身のiCloudに保存されます。<a class="tlink" href="/ja/privacy">プライバシーポリシーを読む</a></p>
+<h3>Medisafeのファイルはどこに送られますか？</h3><p>どこにも送られません。あなたのiPhone上で読み取られます。Yepdoseはサーバーを運営しておらず、App Storeのプライバシーラベルは「データの収集なし」です。</p>
+<h3>見守る人は、これまでどおり飲み忘れの知らせを受けられますか？</h3><p>はい、Familyがあれば受けられます。「設定」→「見守る人と共有」で、その人にiCloudの招待を送ります。相手にもiPhoneが必要です。</p>
+<h3>Yepdoseは医療機器ですか？</h3><p>いいえ。リマインダーと記録のためのツールです。医療上のアドバイスをしたり、あなたに代わって相互作用を確認したり、医師や薬剤師の代わりになったりするものではありません。</p>
+<h3>Appleのヘルスケアから移行する場合は？</h3><p><a class="tlink" href="/ja/vs-apple-health">YepdoseとAppleのヘルスケアの比較</a>をご覧ください。</p>
+</div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="disc">Yepdoseはリマインダーと記録のためのツールです。医療上のアドバイスは行いません。必ず医師または薬剤師の指示に従ってください。</p>
+    <div class="cols">
+      <div><h3>お問い合わせ</h3><ul><li><a href="mailto:hello@yepdose.com">hello@yepdose.com</a></li><li><a href="mailto:support@yepdose.com">support@yepdose.com</a></li><li><a href="mailto:privacy@yepdose.com">privacy@yepdose.com</a></li></ul></div>
+      <div><h3>ページ</h3><ul><li><a href="/ja/compare">YepdoseとMedisafeの比較</a></li><li><a href="/ja/switch-from-medisafe">Medisafeからの移行</a></li><li><a href="/ja/vs-apple-health">YepdoseとAppleのヘルスケアの比較</a></li><li><a href="/ja/support">サポート</a></li><li><a href="/ja/press">プレス</a></li><li><a href="/ja/privacy">プライバシー</a></li><li><a href="/ja/terms">利用規約</a></li></ul></div>
+      <div><h3>このサイト</h3><p>静的なサイトです。Cookieなし、トラッキングスクリプトなし、第三者へのリクエストなし。</p></div>
+    </div>
+    <p class="langs"><a href="/switch-from-medisafe" hreflang="en" lang="en">English</a><a href="/de/switch-from-medisafe" hreflang="de" lang="de">Deutsch</a><a href="/fr/switch-from-medisafe" hreflang="fr" lang="fr">Français</a><a href="/es/switch-from-medisafe" hreflang="es" lang="es">Español</a><a href="/it/switch-from-medisafe" hreflang="it" lang="it">Italiano</a><a href="/ja/switch-from-medisafe" hreflang="ja" lang="ja" aria-current="page">日本語</a><a href="/zh/switch-from-medisafe" hreflang="zh-Hans" lang="zh-Hans">简体中文</a><a href="/ar/switch-from-medisafe" hreflang="ar" lang="ar">العربية</a></p>
+    <p class="colophon"><span class="appmark xs" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#tick"/></svg></span><span>© 2026 Yepdose.</span></p>
+  </div>
+</footer>
+</body>
+</html>
